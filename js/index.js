@@ -10,4 +10,11 @@ $(document).ready(function() {
 	btnToastMessage.addEventListener('click', function(){
 		toastNotification('This is a Toast Notification');
 	});
+
+	var cameraCapture = document.getElementById('btnCameraCapture');
+
+	btnToastMessage.addEventListener('click', function(){
+		cameraCapture('This is a Camera Capture');
+	});
+
 });

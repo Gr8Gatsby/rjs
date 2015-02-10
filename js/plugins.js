@@ -35,8 +35,8 @@ function toastNotification(message) {
   
   if(typeof Windows != 'undefined') {
     //Error detection
-    var text = document.createTextNode("Calling the notifications")
-    document.body.appendChild(text);
+    // var text = document.createTextNode("Calling the notifications")
+    // document.body.appendChild(text);
     // Log to the console
     var notifications = Windows.UI.Notifications;
     //Get the XML template where the notification content will be suplied
@@ -69,4 +69,43 @@ function toastNotification(message) {
     //TODO: Fallback to website functionality
     console.log("ERROR: No Windows namespace was detected");
   }
+}
+
+function cameraCapture () {
+
+  if(typeof Windows != 'undefined') {
+    //Initialize windows media camera capture
+    var captureUI = new Windows.Media.Capture.CameraCaptureUI();
+    //Set the format of the picture that's going to be captured (.png or .jpg)
+    captureUI.photoSettings.format = Windows.Media.Capture.CameraCaptureUIPhotoFormat.png;
+
+    //Pop up the camera UI to take a picture
+    captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
+       if (capturedItem) {
+          // This is where the picture can be taken and shown on the webpage if we want to add this functionality
+
+          // var reader = new window.FileReader();
+          // reader.readAsDataURL(capturedItem); 
+          // reader.onloadend = function() {
+          //   var base64pic = reader.result;                
+          //   //Resize the base64 image
+          //   var photo = document.createElement("img");
+          //   photo.setAttribute('src', base64pic);
+          //   var resizedImage = imageToDataUri(photo, 300, 300);
+          //   //Set the picture as the background of the div
+          //   $("#"+divID).css("background-image", "url(" + resizedImage + ")");
+          //   //Store the image in the DB
+          //   storeImage(divID, resizedImage);
+          // }
+        }
+        else {
+          //Taking a picture has failed
+          console.log("Taking the picture with WinRT failed");
+        }
+    });
+  } else {
+    //TODO: Fallback to website functionality
+    console.log("ERROR: No Windows namespace was detected");
+  }
+
 }
