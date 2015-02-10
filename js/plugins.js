@@ -1,7 +1,7 @@
 
 function systemAlert(message) {
   // Log the message to the console
-  console.log("OUTPUT: " + message.value);
+  console.log("OUTPUT: " + message);
   
   if(typeof Windows != 'undefined') {
     // Log to the console
