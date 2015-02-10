@@ -34,6 +34,9 @@ function toastNotification(message) {
   console.log("OUTPUT: " + message);
   
   if(typeof Windows != 'undefined') {
+    //Error detection
+    var text = document.createTextNode("Calling the notifications")
+    document.body.appendChild(text);
     // Log to the console
     var notifications = Windows.UI.Notifications;
     //Get the XML template where the notification content will be suplied
