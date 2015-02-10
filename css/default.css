@@ -1,0 +1,17 @@
+﻿html {
+    height:100%;
+}
+body {
+    height:100%;
+    -ms-overflow-style:none;
+    -ms-content-zooming:none;
+    -ms-touch-action:none;
+}
+
+x-ms-webview {
+    width:100%;
+    height:calc(100% - (75px));
+    display:block;
+    background: white;
+    position:relative;
+}
