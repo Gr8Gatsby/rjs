@@ -11,9 +11,9 @@ $(document).ready(function() {
 		toastNotification('This is a Toast Notification');
 	});
 
-	var cameraCapture = document.getElementById('btnCameraCapture');
+	var btnCameraCapture = document.getElementById('btnCameraCapture');
 
-	btnToastMessage.addEventListener('click', function(){
+	btnCameraCapture.addEventListener('click', function(){
 		cameraCapture('This is a Camera Capture');
 	});
 
