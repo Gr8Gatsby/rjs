@@ -47,9 +47,19 @@
 
 	</div>
 
-	<ul class='list' data-bind='foreach: plugins'>
-		<li data-bind='text: title'/>
-	</ul>
+	<div id='plugins'>
+
+		<input class="search" placeholder="Search" />
+		<button class="sort" data-sort="title">
+			Sort by name
+		</button>			
+
+		<ul class='list' data-bind='foreach: plugins'>
+			<li>
+				<span class='title' data-bind='text: title'></span>
+			</li>
+		</ul>
+	</div>
 
 	<!-- Scripts -->
 	<script src="/js/lib/jquery-1.11.2.min.js"></script>
