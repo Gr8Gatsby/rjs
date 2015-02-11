@@ -12,51 +12,27 @@
 <body>
 
 	<!-- Demos  -->
-	<h3>Windows APIs</h3>
-	<a id="Reload" onclick="window.location.reload(true);">Reload!</a>
 	<div class="container">
-		<!-- Message Dialog -->
-		<div class="panel panel-default">
-			<div class="panel panel-heading">
-				<h4>Windows.UI.Popups.MessageDialog</h4>
-			</div>
-			<div class="panel panel-body">
-				<button id="btnMessageDialog" class="btn btn-default">Show Dialog</button>
-			</div>
+		<div class="page-header">
+			<h3>Windows APIs</h3>
+			<button id="Reload">Reload!</button>
 		</div>
-
-		<!-- Toast Notification -->
-		<div class="panel panel-default">
-			<div class="panel panel-heading">
-				<h4>Windows.UI.Notifications</h4>
-			</div>
-			<div class="panel panel-body">
-				<button id="btnToastNotification" class="btn btn-default">Show Notification</button>
-			</div>
-		</div>
-
-		<!-- Camera UI -->
-		<div class="panel panel-default">
-			<div class="panel panel-heading">
-				<h4>Windows.Media.Capture</h4>
-			</div>
-			<div class="panel panel-body">
-				<button id="btnCameraCapture" class="btn btn-default">Show Native Camera UI</button>
-			</div>
-		</div>
-
 	</div>
 
-	<div id='plugins'>
+	<div id='plugins' class='container'>
 
 		<input class="search" placeholder="Search" />
 		<button class="sort" data-sort="title">
-			Sort by name
-		</button>			
+			Sort by title
+		</button>	
+		<button class="sort" data-sort="namespace">
+			Sort by namespace
+		</button>		
 
 		<ul class='list' data-bind='foreach: plugins'>
 			<li>
-				<span class='title' data-bind='text: title'></span>
+				<h3 class='namespace' data-bind='text: namespace'></h3>
+				<button class='title' data-bind='text: title,event:{click:actuate}'></button>
 			</li>
 		</ul>
 	</div>

@@ -8,7 +8,7 @@ function apis() {
 			self.plugins.push(data.plugins[plugin]);
 		}
 
-		pluginsList = new List('plugins', {valueNames: [ 'title' ]});
+		pluginsList = new List('plugins', {valueNames: [ 'title', 'namespace' ]});
 	}
 }
 

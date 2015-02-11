@@ -1,11 +1,16 @@
 {
 	"plugins": [
 		{
-			"title": "Show Dialoge",
+			"title": "Show Dialog",
 			"namespace": "Windows.UI.Popups.MessageDialog"
 		},
 		{
-			"title": "Show Toast"
+			"title": "Show Toast",
+			"namespace":"Windows.UI.Notifications"
+		},
+		{
+			"title": "Show Native Camera UI",
+			"namespace":"Windows.Media.Capture.CameraCaptureUI"
 		}	
 	]
 }

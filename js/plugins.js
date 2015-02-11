@@ -1,3 +1,19 @@
+function actuate(plugin){
+  switch(plugin.namespace){
+    case "Windows.UI.Popups.MessageDialog" :
+      systemAlert('This is a Message in a Windows System Dialog');
+      break;
+    case "Windows.UI.Notifications" :
+      toastNotification('Bottoms up!');
+      break;
+    case "Windows.Media.Capture.CameraCaptureUI" :
+      cameraCapture();
+      break;
+    default :
+      console.log("No function defined for " + plugin.namespace);
+  }
+}
+
 
 function systemAlert(message) {
   // Log the message to the console

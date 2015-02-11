@@ -1,24 +1,8 @@
 $(document).ready(function() {
-	var btnMessageDialog = document.getElementById('btnMessageDialog');
-
-	btnMessageDialog.addEventListener('click', function(){
-		systemAlert('This is a Message Dialog');
-	});
-
-
+	var btnReload = document.getElementById('Reload');
+	btnReload.addEventListener('click', function(){window.location.reload(true);})
+	// Load Plugin Data
 	$.getJSON("data/plugins.json", function(data){
 		p.init(data);
-	});
-
-	var btnToastMessage = document.getElementById('btnToastNotification');
-
-	btnToastMessage.addEventListener('click', function(){
-		toastNotification('This is a Toast Notification');
-	});
-
-	var btnCameraCapture = document.getElementById('btnCameraCapture');
-
-	btnCameraCapture.addEventListener('click', function(){
-		cameraCapture('This is a Camera Capture');
 	});
 });
