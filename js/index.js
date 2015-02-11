@@ -4,4 +4,8 @@ $(document).ready(function() {
 	btnMessageDialog.addEventListener('click', function(){
 		systemAlert('This is a Message Dialog');
 	});
+
+	$.getJSON("data/plugins.json", function(data){
+		p.init(data);
+	});
 });

@@ -1,0 +1,11 @@
+{
+	"plugins": [
+		{
+			"title": "Show Dialoge",
+			"namespace": "Windows.UI.Popups.MessageDialog"
+		},
+		{
+			"title": "Show Toast"
+		}	
+	]
+}
