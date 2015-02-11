@@ -5,9 +5,9 @@
 }
 .list > li {
   display:block;
-  background-color: #eee;
+  background-color: #34495E;
   padding:10px;
-  box-shadow: inset 0 1px 0 #fff;
+  box-shadow: inset 0 5px 0 #fff;
 }
 .avatar {
   max-width: 150px;
@@ -36,14 +36,14 @@ input:focus {
   border-color:#aaa;
 }
 .sort {
-  padding:8px 30px;
-  border-radius: 6px;
-  border:none;
-  display:inline-block;
-  color:#fff;
-  text-decoration: none;
-  background-color: #28a8e0;
-  height:30px;
+  /*padding:8px 30px;*/
+  /*border-radius: 6px;*/
+  /*border:none;*/
+  /*display:inline-block;*/
+  color:#fcf;
+  /*text-decoration: none;*/
+  /*background-color: #28a8e0;*/
+  /*height:30px;*/
 }
 .sort:hover {
   text-decoration: none;
