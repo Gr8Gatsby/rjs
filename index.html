@@ -13,7 +13,9 @@
 
 	<!-- Demos  -->
 	<h3>Windows APIs</h3>
+	<a id="Reload" onclick="window.location.reload(true);">Reload!</a>
 	<div class="container">
+		<!-- Message Dialog -->
 		<div class="panel panel-default">
 			<div class="panel panel-heading">
 				<h4>Windows.UI.Popups.MessageDialog</h4>
@@ -22,6 +24,27 @@
 				<button id="btnMessageDialog" class="btn btn-default">Show Dialog</button>
 			</div>
 		</div>
+
+		<!-- Toast Notification -->
+		<div class="panel panel-default">
+			<div class="panel panel-heading">
+				<h4>Windows.UI.Notifications</h4>
+			</div>
+			<div class="panel panel-body">
+				<button id="btnToastNotification" class="btn btn-default">Show Notification</button>
+			</div>
+		</div>
+
+		<!-- Camera UI -->
+		<div class="panel panel-default">
+			<div class="panel panel-heading">
+				<h4>Windows.Media.Capture</h4>
+			</div>
+			<div class="panel panel-body">
+				<button id="btnCameraCapture" class="btn btn-default">Show Native Camera UI</button>
+			</div>
+		</div>
+
 	</div>
 
 	<ul class='list' data-bind='foreach: plugins'>
