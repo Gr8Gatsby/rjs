@@ -11,6 +11,10 @@
 		{
 			"title": "Show Native Camera UI",
 			"namespace":"Windows.Media.Capture.CameraCaptureUI"
+		},
+		{
+			"title": "Pick a Contact",
+			"namespace": "Windows.ApplicationModel.Contact.ContactPicker"
 		}	
 	]
 }

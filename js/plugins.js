@@ -9,6 +9,9 @@ function actuate(plugin){
     case "Windows.Media.Capture.CameraCaptureUI" :
       cameraCapture();
       break;
+    case "Windows.ApplicationModel.Contact.ContactPicker" :
+      pickContact();
+      break;
     default :
       console.log("No function defined for " + plugin.namespace);
   }
@@ -123,5 +126,24 @@ function cameraCapture () {
     //TODO: Fallback to website functionality
     console.log("ERROR: No Windows namespace was detected");
   }
+}
 
+function pickContact(){
+  if(typeof Windows != 'undefined') {
+    // Create the picker 
+    var picker = new Windows.ApplicationModel.Contacts.ContactPicker(); 
+    picker.desiredFieldsWithContactFieldType.append(Windows.ApplicationModel.Contacts.ContactFieldType.email);
+     // Open the picker for the user to select a contact 
+    picker.pickContactAsync().done(function (contact) { 
+      if (contact !== null) { 
+        var output = "Selected contact:\n" + contact.displayName; 
+        console.log(output); 
+      } else { 
+        // The picker was dismissed without selecting a contact 
+        console("No contact was selected"); 
+      } 
+    });
+  } else {
+    console.log("ERROR: No Windows namespace was detected");  
+  }
 }
