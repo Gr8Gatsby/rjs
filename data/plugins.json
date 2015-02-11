@@ -14,13 +14,14 @@
 		},
 		{
 			"title": "Show Native Camera UI",
-			"namespace":"Windows.Media.Capture.CameraCaptureUI"
+			"namespace":"Windows.Media.Capture.CameraCaptureUI",
+			"msdn":"",
+			"gistId":""
 		},
 		{
 			"title": "Pick a Contact",
 			"namespace": "Windows.ApplicationModel.Contact.ContactPicker",
-			"namespace":"Windows.Media.Capture.CameraCaptureUI",
-			"msdn": "https://msdn.com",
+			"msdn": "https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.contacts.contactpicker.aspx",
 			"gistId": "d40d0159ef5bddab7cd6"
 		}	
 	]
