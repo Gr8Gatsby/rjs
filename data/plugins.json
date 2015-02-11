@@ -2,15 +2,21 @@
 	"plugins": [
 		{
 			"title": "Show Dialog",
-			"namespace": "Windows.UI.Popups.MessageDialog"
+			"namespace": "Windows.UI.Popups.MessageDialog",
+			"msdn": "https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.popups.messagedialog.aspx",
+			"gistId": "55555"
 		},
 		{
 			"title": "Show Toast",
-			"namespace":"Windows.UI.Notifications"
+			"namespace":"Windows.UI.Notifications",
+			"msdn": "https://msdn.microsoft.com/EN-US/library/windows/apps/windows.ui.notifications.aspx",
+			"gistId": "55555"
 		},
 		{
 			"title": "Show Native Camera UI",
-			"namespace":"Windows.Media.Capture.CameraCaptureUI"
+			"namespace":"Windows.Media.Capture.CameraCaptureUI",
+			"msdn": "https://msdn.com",
+			"gistId": "55555"
 		}	
 	]
 }
