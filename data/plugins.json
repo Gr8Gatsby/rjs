@@ -2,11 +2,15 @@
 	"plugins": [
 		{
 			"title": "Show Dialog",
-			"namespace": "Windows.UI.Popups.MessageDialog"
+			"namespace": "Windows.UI.Popups.MessageDialog",
+			"msdn": "https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.popups.messagedialog.aspx",
+			"gistId": "d40d0159ef5bddab7cd6"
 		},
 		{
 			"title": "Show Toast",
-			"namespace":"Windows.UI.Notifications"
+			"namespace":"Windows.UI.Notifications",
+			"msdn": "https://msdn.microsoft.com/EN-US/library/windows/apps/windows.ui.notifications.aspx",
+			"gistId": "d40d0159ef5bddab7cd6"
 		},
 		{
 			"title": "Show Native Camera UI",
@@ -14,7 +18,10 @@
 		},
 		{
 			"title": "Pick a Contact",
-			"namespace": "Windows.ApplicationModel.Contact.ContactPicker"
+			"namespace": "Windows.ApplicationModel.Contact.ContactPicker",
+			"namespace":"Windows.Media.Capture.CameraCaptureUI",
+			"msdn": "https://msdn.com",
+			"gistId": "d40d0159ef5bddab7cd6"
 		}	
 	]
 }

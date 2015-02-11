@@ -11,12 +11,21 @@
 </head>
 <body>
 
+	<div class='navBar'> 
+        <p class='titleText'>Windows APIs</p>
+        
+    </div>
+
 	<!-- Demos  -->
 	<div class="container">
+		
+
 		<div class="page-header">
 			<h3>Windows APIs</h3>
 			<button id="Reload">Reload!</button>
 		</div>
+
+		 <!-- <code data-gist-id="d40d0159ef5bddab7cd6"></code> -->
 	</div>
 
 	<div id='plugins' class='container'>
@@ -33,6 +42,8 @@
 			<li>
 				<h3 class='namespace' data-bind='text: namespace'></h3>
 				<button class='title' data-bind='text: title,event:{click:actuate}'></button>
+				<a class="msdn" data-bind="attr:{href: msdn}">MSDN Documentation</a>
+				<code data-bind="attr{ 'data-gist-id': gistId}" data-gist-hide-footer="true" style="display: block;"></code>
 			</li>
 		</ul>
 	</div>
@@ -47,5 +58,6 @@
     <script src="/js/viewModel.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/index.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/2.1/gist-embed.min.js"></script>
 </body>
 </html>
