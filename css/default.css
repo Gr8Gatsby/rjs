@@ -3,9 +3,9 @@
 }
 body {
     height:100%;
-    -ms-overflow-style:none;
+    /*-ms-overflow-style:none;
     -ms-content-zooming:none;
-    -ms-touch-action:none;
+    -ms-touch-action:none;*/
 }
 
 x-ms-webview {
@@ -54,6 +54,11 @@ x-ms-webview {
  .btn-flat {
     background-color: #3498db;
     color: white;
+    margin: 5px;
+    font-size: 10pt;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: right;
  }
 
  .namespace {

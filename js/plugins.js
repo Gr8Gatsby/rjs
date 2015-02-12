@@ -12,10 +12,13 @@ function actuate(plugin){
     case "Windows.ApplicationModel.Contact.ContactPicker" :
       pickContact();
       break;
+    case "Windows.ApplicationModel.Appointment":
+      addAppointment();
+      break;
     default :
       console.log("No function defined for " + plugin.namespace);
   }
-}
+};
 
 
 function systemAlert(message) {
@@ -42,11 +45,11 @@ function systemAlert(message) {
     //TODO: Fallback to website functionality
     console.log("ERROR: No Windows namespace was detected");
   }
-}
+};
 
 function systemAlertCommandInvokedHandler(command) {
   console.log ("OUTPUT: The " + command.label + " was selected");
-}
+};
 
 function toastNotification(message) {
   // Log the message to the console
@@ -88,7 +91,7 @@ function toastNotification(message) {
     //TODO: Fallback to website functionality
     console.log("ERROR: No Windows namespace was detected");
   }
-}
+};
 
 function cameraCapture () {
 
@@ -126,7 +129,7 @@ function cameraCapture () {
     //TODO: Fallback to website functionality
     console.log("ERROR: No Windows namespace was detected");
   }
-}
+};
 
 function pickContact(){
   if(typeof Windows != 'undefined') {
@@ -146,4 +149,27 @@ function pickContact(){
   } else {
     console.log("ERROR: No Windows namespace was detected");  
   }
-}
+};
+
+function addAppointment(){
+  if(typeof Windows != 'undefined') {
+    // Create an Appointment that should be added the user's appointments provider app.
+    var appointment = new Windows.ApplicationModel.Appointments.Appointment();
+    // Get the selection rect of the button pressed to add this appointment
+    var boundingRect = e.srcElement.getBoundingClientRect();
+    var selectionRect = { x: boundingRect.left, y: boundingRect.top, width: boundingRect.width, height: boundingRect.height };
+    // ShowAddAppointmentAsync returns an appointment id if the appointment given was added to the user's calendar.
+    // This value should be stored in app data and roamed so that the appointment can be replaced or removed in the future.
+    // An empty string return value indicates that the user canceled the operation before the appointment was added.
+    Windows.ApplicationModel.Appointments.AppointmentManager.showAddAppointmentAsync(appointment, selectionRect, Windows.UI.Popups.Placement.default)
+      .done(function (appointmentId) {
+        if (appointmentId) {
+          console.log("Appointment Id: " + appointmentId);
+        } else {
+          console.log("Appointment not added");
+        }
+      });
+  } else {
+    console.log("ERROR: No Windows namespace was detected");  
+  }
+};
