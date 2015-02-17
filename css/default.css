@@ -3,8 +3,12 @@
 }
 body {
     height:100%;
-    -ms-overflow-style:none;
+    /*-ms-overflow-style:none;
     -ms-content-zooming:none;
+<<<<<<< HEAD
+=======
+    -ms-touch-action:none;*/
+>>>>>>> 2d950fd5d4997e7be308016bc0ad79e78eead879
 }
 
 x-ms-webview {
