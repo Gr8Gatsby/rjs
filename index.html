@@ -54,13 +54,6 @@
 	<!-- Demos  -->
 	<div class='container containerMargin'>
 
-		<!-- <input class="search" placeholder="Search" /> -->
-		<!-- <button class="sort" data-sort="title">
-			Sort by title
-		</button>	
-		<button class="sort" data-sort="namespace">
-			Sort by namespace
-		</button> -->
 		<button id="Reload">Reload!</button>		
 
 		<ul class='list' data-bind='foreach: plugins'>
@@ -70,7 +63,7 @@
           			<button class='title btn btn-lg btn-flat' data-bind='text: title,event:{click:actuate}'></button>
 				</div>
 				
-				<code data-bind="attr{ 'data-gist-id': gistId}"  style="display: block;"></code>
+				<code data-bind="attr{'data-gist-id': gistId}"  style="display: block;"></code>
 				<a class="msdn" data-bind="attr:{href: msdn}">MSDN</a>
 			</li>
 		</ul>
